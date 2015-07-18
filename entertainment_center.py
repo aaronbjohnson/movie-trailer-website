@@ -41,14 +41,21 @@ def getApi(movie):
 
     trailer = video_url
     title = resp_dict["Title"]
-    #poster = 
-    #release = 
-    #rating = 
-    #runtime = 
-    #genre = 
-    #director = 
-    #plot = 
-    #actors = 
+    poster = resp_dict["Poster"] 
+    release = resp_dict["Released"]
+    rating = resp_dict["Rated"]
+    runtime = resp_dict["Runtime"]
+    genre = resp_dict["Genre"]
+    director = resp_dict["Director"]
+    plot = resp_dict["Plot"]
+    actors = resp_dict["Actors"]
+    print(release)
+    print(rating)
+    print(runtime)
+    print(genre)
+    print(director)
+    print(plot)
+    print(actors)
 
 getApi(movie_list[2])
 
