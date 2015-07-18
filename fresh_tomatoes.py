@@ -102,6 +102,15 @@ main_page_content = '''
       </div>
     </div>
 
+    <!-- Info Window Modal -->
+    <div class="modal" id="infoWindow">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>Release Date:</p>
+            </div>
+        </div>
+    </div
+
     <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -125,7 +134,7 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
-    <p>Release Date: {release_date}</p>
+    <button type="button">About</button>
 </div>
 '''
 
