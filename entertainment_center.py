@@ -1,26 +1,18 @@
 import fresh_tomatoes
 import media
-
-# So this is first attempt at adding stuff from testing.py
-
 import requests
 import json
-
-# Take this out -- only for testing
-#import webbrowser
 
 youtube_key = 'AIzaSyCmJT7e_pi5-5yWNi4F9UXuV8j1fUTlIm8'
 youtube_prefix = 'https://www.youtube.com/watch?v='
 
-
 # Movie list -- Here you can add and subtract movies as your tastes change
-movie_list = ["There Will Be Blood", "The Life Aquatic", "Unforgiven"]
+movie_list = ["There Will Be Blood", "The Life Aquatic", "Unforgiven", "Gladiator", "About Time"]
 
 # TODO: make consistent qoutes, either single or double...check style guide
 
-# Store movies created here
+# Store movie instances here
 movies = []
-
 
 def get_info(movie):
     # Youtube stuff here
@@ -51,7 +43,6 @@ def get_info(movie):
     actors = resp_dict["Actors"]
 
     movies.append(media.Movie(trailer, title, poster, release, rating, runtime, genre, director, plot, actors))
-
 
 # Create movie listings
 for movie in movie_list:
