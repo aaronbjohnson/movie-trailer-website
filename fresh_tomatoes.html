@@ -73,6 +73,18 @@
             $(this).next("div").show("fast", showNext);
           });
         });
+        // Open More Info Modal when 'More Info' button is clicked
+        $(document).on('click', '.info-btn', function (event) {
+            var plot = $(this).attr('data-plot');
+            var title = $(this).attr('data-title');
+            $('.plot-info').append(plot);
+            $('.modal-title').append(title);
+        });
+        // Close More Info Modal when the 'Close' button is clicked
+        $(document).on('click', '.close-modal', function (event) {
+            $('.plot-info').empty();
+            $('.modal-title').empty();
+        });
     </script>
 </head>
 
@@ -92,14 +104,28 @@
       </div>
     </div>
 
-    <!-- Info Window Modal -->
-    <div class="modal" id="infoWindow">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <p>Release Date:</p>
+    <!-- Modal -->
+    <div id="infoModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div id="info-modal-container">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <h5>Plot</h5>
+                    <p class="plot-info"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
-    </div
+      </div>
+    </div>
 
     <!-- Main Page Content -->
     <div class="container">
@@ -116,31 +142,46 @@
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="FeSLPELpMeM" data-toggle="modal" data-target="#trailer">
     <img src="http://ia.media-imdb.com/images/M/MV5BMjA0NjE1ODEyNV5BMl5BanBnXkFtZTcwNDIzMzE5NQ@@._V1_SX300.jpg" width="220" height="342">
     <h2>There Will Be Blood</h2>
-    <button type="button">About</button>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business." data-title="There Will Be Blood" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="yh401Rmkq0o" data-toggle="modal" data-target="#trailer">
     <img src="http://ia.media-imdb.com/images/M/MV5BMTYzODYzNzg2MF5BMl5BanBnXkFtZTcwMTkzOTQzMw@@._V1_SX300.jpg" width="220" height="342">
     <h2>The Life Aquatic with Steve Zissou</h2>
-    <button type="button">About</button>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="With a plan to exact revenge on a mythical shark that killed his partner, oceanographer Steve Zissou rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son." data-title="The Life Aquatic with Steve Zissou" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="XDAXGILEdro" data-toggle="modal" data-target="#trailer">
     <img src="http://ia.media-imdb.com/images/M/MV5BMTkzNTc0NDc4OF5BMl5BanBnXkFtZTcwNTY1ODg3OA@@._V1_SX300.jpg" width="220" height="342">
     <h2>Unforgiven</h2>
-    <button type="button">About</button>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man." data-title="Unforgiven" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="owK1qxDselE" data-toggle="modal" data-target="#trailer">
     <img src="http://ia.media-imdb.com/images/M/MV5BMTgwMzQzNTQ1Ml5BMl5BanBnXkFtZTgwMDY2NTYxMTE@._V1_SX300.jpg" width="220" height="342">
     <h2>Gladiator</h2>
-    <button type="button">About</button>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge." data-title="Gladiator" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="T7A810duHvw" data-toggle="modal" data-target="#trailer">
     <img src="http://ia.media-imdb.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_SX300.jpg" width="220" height="342">
     <h2>About Time</h2>
-    <button type="button">About</button>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think." data-title="About Time" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
     </div>

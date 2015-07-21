@@ -79,6 +79,18 @@ main_page_head = '''
             $(this).next("div").show("fast", showNext);
           });
         });
+        // Open More Info Modal when 'More Info' button is clicked
+        $(document).on('click', '.info-btn', function (event) {
+            var plot = $(this).attr('data-plot');
+            var title = $(this).attr('data-title');
+            $('.plot-info').append(plot);
+            $('.modal-title').append(title);
+        });
+        // Close More Info Modal when the 'Close' button is clicked
+        $(document).on('click', '.close-modal', function (event) {
+            $('.plot-info').empty();
+            $('.modal-title').empty();
+        });
     </script>
 </head>
 '''
@@ -102,14 +114,28 @@ main_page_content = '''
       </div>
     </div>
 
-    <!-- Info Window Modal -->
-    <div class="modal" id="infoWindow">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <p>Release Date:</p>
+    <!-- Modal -->
+    <div id="infoModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div id="info-modal-container">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <h5>Plot</h5>
+                    <p class="plot-info"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
-    </div
+      </div>
+    </div>
 
     <!-- Main Page Content -->
     <div class="container">
@@ -134,7 +160,10 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
-    <button type="button">About</button>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="{plot}" data-title="{movie_title}" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 '''
 

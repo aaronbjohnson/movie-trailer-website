@@ -13,22 +13,23 @@ movie_list = ["There Will Be Blood", "The Life Aquatic", "Unforgiven",
 
 movies = []
 
-def get_info(movie):
+
+def get_info(video):
     """Fetches movie info from Open Movie Database"""
 
     # Youtube stuff here
 
     youtube = requests.get('https://www.googleapis.com/youtube/v3/search?part=s'
-                           'nippet&q=' + movie + 'trailer&maxResults=1&key=' + 
+                           'nippet&q=' + video + 'trailer&maxResults=1&key=' +
                            youtube_key)
     youtube_str = youtube.text
     youtube_dict = json.loads(youtube_str)
-    video_Id = youtube_dict['items'][0]['id']['videoId']
-    video_url = youtube_prefix + video_Id
+    video_id = youtube_dict['items'][0]['id']['videoId']
+    video_url = youtube_prefix + video_id
 
     # Movie Database stuff here
 
-    result = requests.get('http://www.omdbapi.com/?t=' + movie + '&y=&plot='
+    result = requests.get('http://www.omdbapi.com/?t=' + video + '&y=&plot='
                           'short&r=json')
     resp_str = result.text
 
@@ -39,7 +40,7 @@ def get_info(movie):
 
     trailer = video_url
     title = resp_dict["Title"]
-    poster = resp_dict["Poster"] 
+    poster = resp_dict["Poster"]
     release = resp_dict["Released"]
     rating = resp_dict["Rated"]
     runtime = resp_dict["Runtime"]
@@ -57,4 +58,3 @@ for movie in movie_list:
     get_info(movie)
 
 fresh_tomatoes.open_movies_page(movies)
-
