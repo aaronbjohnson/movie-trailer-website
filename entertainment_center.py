@@ -21,7 +21,7 @@ def get_info(video):
 
     youtube = requests.get('https://www.googleapis.com/youtube/v3/search?part=s'
                            'nippet&q=' + video + 'trailer&maxResults=1&key=' +
-                           youtube_key)
+                           youtube_key, timeout=10)
     youtube_str = youtube.text
     youtube_dict = json.loads(youtube_str)
     video_id = youtube_dict['items'][0]['id']['videoId']
@@ -30,7 +30,7 @@ def get_info(video):
     # Movie Database stuff here
 
     result = requests.get('http://www.omdbapi.com/?t=' + video + '&y=&plot='
-                          'short&r=json')
+                          'short&r=json', timeout=10)
     resp_str = result.text
 
     # Convert data into a python dictionary

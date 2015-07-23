@@ -83,13 +83,17 @@ main_page_head = '''
         $(document).on('click', '.info-btn', function (event) {
             var plot = $(this).attr('data-plot');
             var title = $(this).attr('data-title');
+            var release = $(this).attr('data-release');
             $('.plot-info').append(plot);
             $('.modal-title').append(title);
+            $('.release-info').append(release);
+
         });
         // Close More Info Modal when the 'Close' button is clicked
         $(document).on('click', '.close-modal', function (event) {
             $('.plot-info').empty();
             $('.modal-title').empty();
+            $('.release-info').empty();
         });
     </script>
 </head>
@@ -128,6 +132,7 @@ main_page_content = '''
                 <div class="modal-body">
                     <h5>Plot</h5>
                     <p class="plot-info"></p>
+                    <p class="release-info">Release Date: </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
@@ -163,7 +168,7 @@ movie_tile_content = '''
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="{plot}" data-title="{movie_title}" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="{plot}" data-title="{movie_title}" data-release="{release_date}" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 '''
 

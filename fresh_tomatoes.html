@@ -77,13 +77,17 @@
         $(document).on('click', '.info-btn', function (event) {
             var plot = $(this).attr('data-plot');
             var title = $(this).attr('data-title');
+            var release = $(this).attr('data-release');
             $('.plot-info').append(plot);
             $('.modal-title').append(title);
+            $('.release-info').append(release);
+
         });
         // Close More Info Modal when the 'Close' button is clicked
         $(document).on('click', '.close-modal', function (event) {
             $('.plot-info').empty();
             $('.modal-title').empty();
+            $('.release-info').empty();
         });
     </script>
 </head>
@@ -118,6 +122,7 @@
                 <div class="modal-body">
                     <h5>Plot</h5>
                     <p class="plot-info"></p>
+                    <p class="release-info">Release Date: </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
@@ -145,7 +150,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business." data-title="There Will Be Blood" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business." data-title="There Will Be Blood" data-release="25 Jan 2008" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="yh401Rmkq0o" data-toggle="modal" data-target="#trailer">
@@ -154,7 +159,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="With a plan to exact revenge on a mythical shark that killed his partner, oceanographer Steve Zissou rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son." data-title="The Life Aquatic with Steve Zissou" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="With a plan to exact revenge on a mythical shark that killed his partner, oceanographer Steve Zissou rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son." data-title="The Life Aquatic with Steve Zissou" data-release="25 Dec 2004" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="XDAXGILEdro" data-toggle="modal" data-target="#trailer">
@@ -163,7 +168,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man." data-title="Unforgiven" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man." data-title="Unforgiven" data-release="7 Aug 1992" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="owK1qxDselE" data-toggle="modal" data-target="#trailer">
@@ -172,7 +177,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge." data-title="Gladiator" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge." data-title="Gladiator" data-release="5 May 2000" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="T7A810duHvw" data-toggle="modal" data-target="#trailer">
@@ -181,7 +186,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think." data-title="About Time" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think." data-title="About Time" data-release="8 Nov 2013" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
     </div>
