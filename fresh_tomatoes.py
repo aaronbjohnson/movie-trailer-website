@@ -35,6 +35,7 @@ main_page_head = '''
         }
         .movie-tile {
             margin-bottom: 20px;
+            margin-top: 10px;
             padding-top: 20px;
         }
         .movie-tile:hover {
