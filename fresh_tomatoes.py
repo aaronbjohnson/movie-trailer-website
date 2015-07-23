@@ -109,6 +109,15 @@ main_page_head = '''
             $('.director-info').empty();
             $('.actors-info').empty();
         });
+        // Make all movie tiles have the same height
+        // Source: http://stackoverflow.com/questions/23287206/same-height-column-bootstrap-3-row-responsive
+        $(document).ready(function() {
+            var heights = $(".movie-tile").map(function() {
+                return $(this).height();
+            }).get(),
+            maxHeight = Math.max.apply(null, heights);
+            $(".movie-tile").height(maxHeight);
+        });
     </script>
 </head>
 '''
@@ -171,7 +180,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand page-heading" href="#">Fresh Tomatoes Movie Trailers</a>
           </div>
         </div>
       </div>
