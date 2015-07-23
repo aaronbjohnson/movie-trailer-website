@@ -109,6 +109,7 @@ main_page_head = '''
             $('.director-info').empty();
             $('.actors-info').empty();
         });
+        // Close More Info Modal when the 'X' icon is clicked
     </script>
 </head>
 '''
@@ -140,8 +141,7 @@ main_page_content = '''
         <div class="modal-content">
             <div id="info-modal-container">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title"></h4>
+                    <h4 class="modal-title text-center"></h4>
                 </div>
                 <div class="modal-body">
                     <h5>Plot</h5>
