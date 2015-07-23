@@ -99,7 +99,7 @@ main_page_head = '''
             $('.actors-info').append(actors);
         });
         // Close More Info Modal when the 'Close' button is clicked
-        $(document).on('click', '.close-modal', function (event) {
+        $(document).on('click', '.close-modal, #infoModal', function (event) {
             $('.plot-info').empty();
             $('.modal-title').empty();
             $('.release-info').empty();
@@ -109,7 +109,6 @@ main_page_head = '''
             $('.director-info').empty();
             $('.actors-info').empty();
         });
-        // Close More Info Modal when the 'X' icon is clicked
     </script>
 </head>
 '''
