@@ -63,7 +63,7 @@ main_page_head = '''
             $("#trailer-video-container").empty();
         });
         // Start playing the video whenever the trailer modal is opened
-        $(document).on('click', '.movie-tile', function (event) {
+        $(document).on('click', '.movie-tile-video', function (event) {
             var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
             var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
             $("#trailer-video-container").empty().append($("<iframe></iframe>", {
@@ -186,12 +186,11 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
-</div>
-
-<div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4 movie-tile text-center">
+    <div class="movie-tile-video" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+        <img src="{poster_image_url}" width="220" height="342">
+        <h2>{movie_title}</h2>
+    </div>
     <button type="button" class="info-btn btn btn-info btn-lg" data-plot="{plot}" data-title="{movie_title}" data-release="{release_date}" data-rating="{rating}" data-runtime="{runtime}" data-genre="{genre}" data-director="{director}" data-actors="{actors}" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 '''
