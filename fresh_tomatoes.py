@@ -84,16 +84,30 @@ main_page_head = '''
             var plot = $(this).attr('data-plot');
             var title = $(this).attr('data-title');
             var release = $(this).attr('data-release');
+            var rating = $(this).attr('data-rating');
+            var runtime = $(this).attr('data-runtime');
+            var genre = $(this).attr('data-genre');
+            var director = $(this).attr('data-director');
+            var actors = $(this).attr('data-actors');
             $('.plot-info').append(plot);
             $('.modal-title').append(title);
             $('.release-info').append(release);
-
+            $('.rating-info').append(rating);
+            $('.runtime-info').append(runtime);
+            $('.genre-info').append(genre);
+            $('.director-info').append(director);
+            $('.actors-info').append(actors);
         });
         // Close More Info Modal when the 'Close' button is clicked
         $(document).on('click', '.close-modal', function (event) {
             $('.plot-info').empty();
             $('.modal-title').empty();
             $('.release-info').empty();
+            $('.rating-info').empty();
+            $('.runtime-info').empty();
+            $('.genre-info').empty();
+            $('.director-info').empty();
+            $('.actors-info').empty();
         });
     </script>
 </head>
@@ -132,7 +146,18 @@ main_page_content = '''
                 <div class="modal-body">
                     <h5>Plot</h5>
                     <p class="plot-info"></p>
-                    <p class="release-info">Release Date: </p>
+                    <h5>Release Date</h5>
+                    <p class="release-info"></p>
+                    <h5>Rating</h5>
+                    <p class="rating-info"></p>
+                    <h5>Runtime</h5>
+                    <p class="runtime-info"></p>
+                    <h5>Genre</h5>
+                    <p class="genre-info"></p>
+                    <h5>Director</h5>
+                    <p class="director-info"></p>
+                    <h5>Actors</h5>
+                    <p class="actors-info"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
@@ -168,7 +193,7 @@ movie_tile_content = '''
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="{plot}" data-title="{movie_title}" data-release="{release_date}" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="{plot}" data-title="{movie_title}" data-release="{release_date}" data-rating="{rating}" data-runtime="{runtime}" data-genre="{genre}" data-director="{director}" data-actors="{actors}" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 '''
 

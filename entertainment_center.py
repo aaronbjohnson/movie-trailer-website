@@ -9,7 +9,7 @@ youtube_prefix = 'https://www.youtube.com/watch?v='
 # Movie list -- Here you can add and subtract movies as your tastes change
 
 movie_list = ["There Will Be Blood", "The Life Aquatic", "Unforgiven", 
-              "Gladiator", "About Time"]
+              "Gladiator", "About Time", "The 'Burbs"]
 
 movies = []
 

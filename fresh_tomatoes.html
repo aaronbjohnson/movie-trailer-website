@@ -78,16 +78,30 @@
             var plot = $(this).attr('data-plot');
             var title = $(this).attr('data-title');
             var release = $(this).attr('data-release');
+            var rating = $(this).attr('data-rating');
+            var runtime = $(this).attr('data-runtime');
+            var genre = $(this).attr('data-genre');
+            var director = $(this).attr('data-director');
+            var actors = $(this).attr('data-actors');
             $('.plot-info').append(plot);
             $('.modal-title').append(title);
             $('.release-info').append(release);
-
+            $('.rating-info').append(rating);
+            $('.runtime-info').append(runtime);
+            $('.genre-info').append(genre);
+            $('.director-info').append(director);
+            $('.actors-info').append(actors);
         });
         // Close More Info Modal when the 'Close' button is clicked
         $(document).on('click', '.close-modal', function (event) {
             $('.plot-info').empty();
             $('.modal-title').empty();
             $('.release-info').empty();
+            $('.rating-info').empty();
+            $('.runtime-info').empty();
+            $('.genre-info').empty();
+            $('.director-info').empty();
+            $('.actors-info').empty();
         });
     </script>
 </head>
@@ -122,7 +136,18 @@
                 <div class="modal-body">
                     <h5>Plot</h5>
                     <p class="plot-info"></p>
-                    <p class="release-info">Release Date: </p>
+                    <h5>Release Date</h5>
+                    <p class="release-info"></p>
+                    <h5>Rating</h5>
+                    <p class="rating-info"></p>
+                    <h5>Runtime</h5>
+                    <p class="runtime-info"></p>
+                    <h5>Genre</h5>
+                    <p class="genre-info"></p>
+                    <h5>Director</h5>
+                    <p class="director-info"></p>
+                    <h5>Actors</h5>
+                    <p class="actors-info"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
@@ -150,7 +175,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business." data-title="There Will Be Blood" data-release="25 Jan 2008" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business." data-title="There Will Be Blood" data-release="25 Jan 2008" data-rating="R" data-runtime="158 min" data-genre="Drama" data-director="Paul Thomas Anderson" data-actors="Daniel Day-Lewis, Martin Stringer, Matthew Braden Stringer, Jacob Stringer" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="yh401Rmkq0o" data-toggle="modal" data-target="#trailer">
@@ -159,7 +184,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="With a plan to exact revenge on a mythical shark that killed his partner, oceanographer Steve Zissou rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son." data-title="The Life Aquatic with Steve Zissou" data-release="25 Dec 2004" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="With a plan to exact revenge on a mythical shark that killed his partner, oceanographer Steve Zissou rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son." data-title="The Life Aquatic with Steve Zissou" data-release="25 Dec 2004" data-rating="R" data-runtime="119 min" data-genre="Adventure, Comedy, Drama" data-director="Wes Anderson" data-actors="Bill Murray, Owen Wilson, Cate Blanchett, Anjelica Huston" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="XDAXGILEdro" data-toggle="modal" data-target="#trailer">
@@ -168,7 +193,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man." data-title="Unforgiven" data-release="7 Aug 1992" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man." data-title="Unforgiven" data-release="7 Aug 1992" data-rating="R" data-runtime="131 min" data-genre="Western" data-director="Clint Eastwood" data-actors="Clint Eastwood, Gene Hackman, Morgan Freeman, Richard Harris" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="owK1qxDselE" data-toggle="modal" data-target="#trailer">
@@ -177,7 +202,7 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge." data-title="Gladiator" data-release="5 May 2000" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge." data-title="Gladiator" data-release="5 May 2000" data-rating="R" data-runtime="155 min" data-genre="Action, Drama" data-director="Ridley Scott" data-actors="Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="T7A810duHvw" data-toggle="modal" data-target="#trailer">
@@ -186,7 +211,16 @@
 </div>
 
 <div class="col-md-6 col-lg-4">
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think." data-title="About Time" data-release="8 Nov 2013" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think." data-title="About Time" data-release="8 Nov 2013" data-rating="R" data-runtime="123 min" data-genre="Drama, Fantasy, Romance" data-director="Richard Curtis" data-actors="Domhnall Gleeson, Rachel McAdams, Bill Nighy, Lydia Wilson" data-toggle="modal" data-target="#infoModal">More Info</button>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="-7_uwFcI8JE" data-toggle="modal" data-target="#trailer">
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTMwOTYzMTkzMl5BMl5BanBnXkFtZTcwMDI0OTUxMQ@@._V1_SX300.jpg" width="220" height="342">
+    <h2>The 'Burbs</h2>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="An overstressed suburbanite and his paramilitaric neighbor struggle to prove their paranoid theory that the new family in town is a front for a cannibalistic cult." data-title="The 'Burbs" data-release="17 Feb 1989" data-rating="PG" data-runtime="101 min" data-genre="Comedy, Mystery" data-director="Joe Dante" data-actors="Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun" data-toggle="modal" data-target="#infoModal">More Info</button>
 </div>
 
     </div>
