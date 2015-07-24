@@ -75,7 +75,7 @@
           });
         });
         // Open More Info Modal when 'More Info' button is clicked
-        $(document).on('click', '.info-btn', function (event) {
+        $(document).on('click', '.btn-info', function (event) {
             var plot = $(this).attr('data-plot');
             var title = $(this).attr('data-title');
             var release = $(this).attr('data-release');
@@ -118,72 +118,76 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <body>
-    <!-- Trailer Video Modal -->
-    <div class="modal" id="trailer">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
-            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
-          </a>
-          <div class="scale-media" id="trailer-video-container">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="infoModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div id="info-modal-container">
-                <div class="modal-header">
-                    <h4 class="modal-title text-center"></h4>
-                </div>
-                <div class="modal-body">
-                    <h5>Plot</h5>
-                    <p class="plot-info"></p>
-                    <h5>Release Date</h5>
-                    <p class="release-info"></p>
-                    <h5>Rating</h5>
-                    <p class="rating-info"></p>
-                    <h5>Runtime</h5>
-                    <p class="runtime-info"></p>
-                    <h5>Genre</h5>
-                    <p class="genre-info"></p>
-                    <h5>Director</h5>
-                    <p class="director-info"></p>
-                    <h5>Actors</h5>
-                    <p class="actors-info"></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
+    <body>
+        <!-- Trailer Video Modal -->
+        <div class="modal" id="trailer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+                        <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+                    </a>
+                    <div class="scale-media" id="trailer-video-container">
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Main Page Content -->
-    <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand page-heading" href="#">Fresh Tomatoes Movie Trailers</a>
-          </div>
+        <!-- Modal -->
+        <div id="infoModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div id="info-modal-container">
+                        <div class="modal-header">
+                            <h4 class="modal-title text-center"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Plot</h5>
+                            <p class="plot-info"></p>
+                            <h5>Release Date</h5>
+                            <p class="release-info"></p>
+                            <h5>Rating</h5>
+                            <p class="rating-info"></p>
+                            <h5>Runtime</h5>
+                            <p class="runtime-info"></p>
+                            <h5>Genre</h5>
+                            <p class="genre-info"></p>
+                            <h5>Director</h5>
+                            <p class="director-info"></p>
+                            <h5>Actors</h5>
+                            <p class="actors-info"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      
+
+        <!-- Main Page Content -->
+        <div class="container">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand page-heading" href="#">Fresh Tomatoes Movie Trailers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
 <div class="col-md-6 col-lg-4 movie-tile text-center">
     <div class="movie-tile-video" data-trailer-youtube-id="FeSLPELpMeM" data-toggle="modal" data-target="#trailer">
         <img src="http://ia.media-imdb.com/images/M/MV5BMjA0NjE1ODEyNV5BMl5BanBnXkFtZTcwNDIzMzE5NQ@@._V1_SX300.jpg" width="220" height="342">
         <h2>There Will Be Blood</h2>
     </div>
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business." data-title="There Will Be Blood" data-release="25 Jan 2008" data-rating="R" data-runtime="158 min" data-genre="Drama" data-director="Paul Thomas Anderson" data-actors="Daniel Day-Lewis, Martin Stringer, Matthew Braden Stringer, Jacob Stringer" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="btn btn-info btn-lg" data-plot="A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business."
+        data-title="There Will Be Blood" data-release="25 Jan 2008"
+        data-rating="R" data-runtime="158 min" data-genre="Drama"
+        data-director="Paul Thomas Anderson" data-actors="Daniel Day-Lewis, Martin Stringer, Matthew Braden Stringer, Jacob Stringer" data-toggle="modal"
+        data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center">
@@ -191,7 +195,11 @@
         <img src="http://ia.media-imdb.com/images/M/MV5BMTYzODYzNzg2MF5BMl5BanBnXkFtZTcwMTkzOTQzMw@@._V1_SX300.jpg" width="220" height="342">
         <h2>The Life Aquatic with Steve Zissou</h2>
     </div>
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="With a plan to exact revenge on a mythical shark that killed his partner, oceanographer Steve Zissou rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son." data-title="The Life Aquatic with Steve Zissou" data-release="25 Dec 2004" data-rating="R" data-runtime="119 min" data-genre="Adventure, Comedy, Drama" data-director="Wes Anderson" data-actors="Bill Murray, Owen Wilson, Cate Blanchett, Anjelica Huston" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="btn btn-info btn-lg" data-plot="With a plan to exact revenge on a mythical shark that killed his partner, oceanographer Steve Zissou rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son."
+        data-title="The Life Aquatic with Steve Zissou" data-release="25 Dec 2004"
+        data-rating="R" data-runtime="119 min" data-genre="Adventure, Comedy, Drama"
+        data-director="Wes Anderson" data-actors="Bill Murray, Owen Wilson, Cate Blanchett, Anjelica Huston" data-toggle="modal"
+        data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center">
@@ -199,7 +207,11 @@
         <img src="http://ia.media-imdb.com/images/M/MV5BMTkzNTc0NDc4OF5BMl5BanBnXkFtZTcwNTY1ODg3OA@@._V1_SX300.jpg" width="220" height="342">
         <h2>Unforgiven</h2>
     </div>
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man." data-title="Unforgiven" data-release="7 Aug 1992" data-rating="R" data-runtime="131 min" data-genre="Western" data-director="Clint Eastwood" data-actors="Clint Eastwood, Gene Hackman, Morgan Freeman, Richard Harris" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="btn btn-info btn-lg" data-plot="Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man."
+        data-title="Unforgiven" data-release="7 Aug 1992"
+        data-rating="R" data-runtime="131 min" data-genre="Western"
+        data-director="Clint Eastwood" data-actors="Clint Eastwood, Gene Hackman, Morgan Freeman, Richard Harris" data-toggle="modal"
+        data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center">
@@ -207,7 +219,11 @@
         <img src="http://ia.media-imdb.com/images/M/MV5BMTgwMzQzNTQ1Ml5BMl5BanBnXkFtZTgwMDY2NTYxMTE@._V1_SX300.jpg" width="220" height="342">
         <h2>Gladiator</h2>
     </div>
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge." data-title="Gladiator" data-release="5 May 2000" data-rating="R" data-runtime="155 min" data-genre="Action, Drama" data-director="Ridley Scott" data-actors="Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="btn btn-info btn-lg" data-plot="When a Roman general is betrayed and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge."
+        data-title="Gladiator" data-release="5 May 2000"
+        data-rating="R" data-runtime="155 min" data-genre="Action, Drama"
+        data-director="Ridley Scott" data-actors="Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed" data-toggle="modal"
+        data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center">
@@ -215,7 +231,11 @@
         <img src="http://ia.media-imdb.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_SX300.jpg" width="220" height="342">
         <h2>About Time</h2>
     </div>
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think." data-title="About Time" data-release="8 Nov 2013" data-rating="R" data-runtime="123 min" data-genre="Drama, Fantasy, Romance" data-director="Richard Curtis" data-actors="Domhnall Gleeson, Rachel McAdams, Bill Nighy, Lydia Wilson" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="btn btn-info btn-lg" data-plot="At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think."
+        data-title="About Time" data-release="8 Nov 2013"
+        data-rating="R" data-runtime="123 min" data-genre="Drama, Fantasy, Romance"
+        data-director="Richard Curtis" data-actors="Domhnall Gleeson, Rachel McAdams, Bill Nighy, Lydia Wilson" data-toggle="modal"
+        data-target="#infoModal">More Info</button>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center">
@@ -223,9 +243,13 @@
         <img src="http://ia.media-imdb.com/images/M/MV5BMTMwOTYzMTkzMl5BMl5BanBnXkFtZTcwMDI0OTUxMQ@@._V1_SX300.jpg" width="220" height="342">
         <h2>The 'Burbs</h2>
     </div>
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="An overstressed suburbanite and his paramilitaric neighbor struggle to prove their paranoid theory that the new family in town is a front for a cannibalistic cult." data-title="The 'Burbs" data-release="17 Feb 1989" data-rating="PG" data-runtime="101 min" data-genre="Comedy, Mystery" data-director="Joe Dante" data-actors="Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="btn btn-info btn-lg" data-plot="An overstressed suburbanite and his paramilitaric neighbor struggle to prove their paranoid theory that the new family in town is a front for a cannibalistic cult."
+        data-title="The 'Burbs" data-release="17 Feb 1989"
+        data-rating="PG" data-runtime="101 min" data-genre="Comedy, Mystery"
+        data-director="Joe Dante" data-actors="Tom Hanks, Bruce Dern, Carrie Fisher, Rick Ducommun" data-toggle="modal"
+        data-target="#infoModal">More Info</button>
 </div>
 
-    </div>
-  </body>
+        </div>
+    </body>
 </html>

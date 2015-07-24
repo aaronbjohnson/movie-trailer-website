@@ -17,7 +17,7 @@ movies = []
 def get_info(video):
     """Fetches movie info from Open Movie Database"""
 
-    # Youtube stuff here
+    # Request data from Youtube
 
     youtube = requests.get('https://www.googleapis.com/youtube/v3/search?part=s'
                            'nippet&q=' + video + 'trailer&maxResults=1&key=' +
@@ -27,7 +27,7 @@ def get_info(video):
     video_id = youtube_dict['items'][0]['id']['videoId']
     video_url = youtube_prefix + video_id
 
-    # Movie Database stuff here
+    # Request data from OMDB
 
     result = requests.get('http://www.omdbapi.com/?t=' + video + '&y=&plot='
                           'short&r=json', timeout=20)

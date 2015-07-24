@@ -81,7 +81,7 @@ main_page_head = '''
           });
         });
         // Open More Info Modal when 'More Info' button is clicked
-        $(document).on('click', '.info-btn', function (event) {
+        $(document).on('click', '.btn-info', function (event) {
             var plot = $(this).attr('data-plot');
             var title = $(this).attr('data-title');
             var release = $(this).attr('data-release');
@@ -128,68 +128,68 @@ main_page_head = '''
 main_page_content = '''
 <!DOCTYPE html>
 <html lang="en">
-  <body>
-    <!-- Trailer Video Modal -->
-    <div class="modal" id="trailer">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
-            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
-          </a>
-          <div class="scale-media" id="trailer-video-container">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="infoModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div id="info-modal-container">
-                <div class="modal-header">
-                    <h4 class="modal-title text-center"></h4>
-                </div>
-                <div class="modal-body">
-                    <h5>Plot</h5>
-                    <p class="plot-info"></p>
-                    <h5>Release Date</h5>
-                    <p class="release-info"></p>
-                    <h5>Rating</h5>
-                    <p class="rating-info"></p>
-                    <h5>Runtime</h5>
-                    <p class="runtime-info"></p>
-                    <h5>Genre</h5>
-                    <p class="genre-info"></p>
-                    <h5>Director</h5>
-                    <p class="director-info"></p>
-                    <h5>Actors</h5>
-                    <p class="actors-info"></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
+    <body>
+        <!-- Trailer Video Modal -->
+        <div class="modal" id="trailer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+                        <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+                    </a>
+                    <div class="scale-media" id="trailer-video-container">
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Main Page Content -->
-    <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand page-heading" href="#">Fresh Tomatoes Movie Trailers</a>
-          </div>
+        <!-- Modal -->
+        <div id="infoModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div id="info-modal-container">
+                        <div class="modal-header">
+                            <h4 class="modal-title text-center"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Plot</h5>
+                            <p class="plot-info"></p>
+                            <h5>Release Date</h5>
+                            <p class="release-info"></p>
+                            <h5>Rating</h5>
+                            <p class="rating-info"></p>
+                            <h5>Runtime</h5>
+                            <p class="runtime-info"></p>
+                            <h5>Genre</h5>
+                            <p class="genre-info"></p>
+                            <h5>Director</h5>
+                            <p class="director-info"></p>
+                            <h5>Actors</h5>
+                            <p class="actors-info"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="close-modal btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      {movie_tiles}
-    </div>
-  </body>
+
+        <!-- Main Page Content -->
+        <div class="container">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand page-heading" href="#">Fresh Tomatoes Movie Trailers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            {movie_tiles}
+        </div>
+    </body>
 </html>
 '''
 
@@ -201,7 +201,11 @@ movie_tile_content = '''
         <img src="{poster_image_url}" width="220" height="342">
         <h2>{movie_title}</h2>
     </div>
-    <button type="button" class="info-btn btn btn-info btn-lg" data-plot="{plot}" data-title="{movie_title}" data-release="{release_date}" data-rating="{rating}" data-runtime="{runtime}" data-genre="{genre}" data-director="{director}" data-actors="{actors}" data-toggle="modal" data-target="#infoModal">More Info</button>
+    <button type="button" class="btn btn-info btn-lg" data-plot="{plot}"
+        data-title="{movie_title}" data-release="{release_date}"
+        data-rating="{rating}" data-runtime="{runtime}" data-genre="{genre}"
+        data-director="{director}" data-actors="{actors}" data-toggle="modal"
+        data-target="#infoModal">More Info</button>
 </div>
 '''
 
