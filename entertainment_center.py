@@ -2,8 +2,9 @@ import fresh_tomatoes
 import media
 import requests
 import json
+import config
 
-youtube_key = 'AIzaSyCmJT7e_pi5-5yWNi4F9UXuV8j1fUTlIm8'
+youtube_suffix = config.youtube_key
 youtube_prefix = 'https://www.youtube.com/watch?v='
 
 # Movie list -- Here you can add and subtract movies as your tastes change
@@ -21,7 +22,7 @@ def get_info(video):
 
     youtube = requests.get('https://www.googleapis.com/youtube/v3/search?part=s'
                            'nippet&q=' + video + 'trailer&maxResults=1&key=' +
-                           youtube_key, timeout=20)
+                           youtube_suffix, timeout=20)
     youtube_str = youtube.text
     youtube_dict = json.loads(youtube_str)
     video_id = youtube_dict['items'][0]['id']['videoId']
