@@ -18,7 +18,12 @@ Open the repository and run entertainment_center.py:
 python entertainment_center.py
 ```
 
-### Bug reports
+## Updating Movie List
+
+In order to customize the movie list, simply open entertainment_center.py and
+add the title of the movie to the 'movie_list' array.
+
+## Bug reports
 
 If you discover any bugs, feel free to create an issue on GitHub. I also
 encourage you to help even more by forking and sending me a pull request.
